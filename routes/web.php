@@ -20,6 +20,6 @@ $router->get('/', function () {
 });
 
 $router->get('/practice1', function () {
-    return app('Models/Practice_1');
+    return view('Practice_1');
 });
 

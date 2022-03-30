@@ -31,3 +31,8 @@ class Practice_1 extends Model
                
     }
 }
+$s=new Practice_1;
+$n=9;
+echo "n=$n,f($n)=";
+echo $s->fib($n);
+
