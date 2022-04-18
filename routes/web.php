@@ -17,9 +17,10 @@ use Illuminate\Database\Eloquent\Model;
 
 $router->get('/', function () {
     return 'index';
+    echo"2";
 });
 
-$router->get('/practice1', function () {
-    return view('Practice_1');
-});
 
+    $router->get('/posts', 'PracticeController@showAllposts');
+    $router->get('/posts/{id}', 'PracticeController@show');
+    

@@ -11,21 +11,28 @@ class CreatePractice1sTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('practice_1s', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+    function fib($n) {
+       
+        if($n==0){
+            return 0;
+        }
+        if($n==1 || $n==2){
+            return 1;
+        }
+        $n1 = 1;
+        $n2 = 1;
+        $result = "";
+       for($i=3;$i<=$n;$i++){
+           $result = $n1+$n2;
+           $n1=$n2;
+           $n2=$result;
+       }
+        return $result;
+    
+    
     }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('practice_1s');
-    }
+    
+    
 }
+$n =8;
+    echo "n=$n,f($n)=fib($n)";
